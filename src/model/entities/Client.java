@@ -16,13 +16,16 @@ public class Client {
     private int accountsAssocieted = 0;
 
 
-    public
-    Client(String cpf, String name, Date birthDate, Address reside, ClientType classe)  {
+    public Client(String cpf, String name, Date birthDate, Address reside, ClientType classe)  {
         this.cpf = cpf;
         this.name = name;
         this.birthDate = birthDate;
         this.reside = reside;
         this.classe = classe;
+    }
+
+    public Client(String cpf) {
+        this.cpf = cpf;
     }
 
     public
@@ -93,6 +96,14 @@ public class Client {
         clientInfo.append("\nTIPO: " + classe);
 
         return clientInfo.toString();
+    }
+
+    @Override
+    public boolean equals(Object client){
+        if(client instanceof Client){
+            if(cpf == ((Client)client).getCpf()) return true;
+        }
+        return false;
     }
 
 }

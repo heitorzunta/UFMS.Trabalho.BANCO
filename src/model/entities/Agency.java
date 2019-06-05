@@ -13,6 +13,10 @@ public class Agency implements Comparable<Agency>{
         this.addAgency = addAgency;
     }
 
+    public Agency(int codAgency) {
+        this.codAgency = codAgency;
+    }
+
     public Integer getCodAgency() {
         return codAgency;
     }

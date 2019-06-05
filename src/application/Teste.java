@@ -5,11 +5,18 @@ import model.enums.ClientType;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+import java.util.Scanner;
 
 import static control.ControlFunctionInBank.*;
 
 public class Teste {
+
+
+
+        Scanner teclado = new Scanner(System.in);
 
     public static void main(String[] args)  throws ParseException {
 
@@ -112,12 +119,17 @@ public class Teste {
         FUNCTION_TURN_MONTH(easy);
 
 
+        List<Agency> agencia = new ArrayList<Agency>();
 
+        agencia.add(agencia1);
 
+        int inteiro = 1;
 
+        Agency ageciaTeste = new Agency(inteiro);
 
-
-
+        System.out.println(agencia.indexOf(ageciaTeste));
 
     }
+
+
 }
