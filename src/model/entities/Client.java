@@ -29,6 +29,16 @@ public class Client {
     }
 
     public
+    int getAccountsAssocieted() {
+        return accountsAssocieted;
+    }
+
+    public
+    void setAccountsAssocieted(int accountsAssocieted) {
+        this.accountsAssocieted = accountsAssocieted;
+    }
+
+    public
     String getCpf() {
         return cpf;
     }
@@ -101,7 +111,7 @@ public class Client {
     @Override
     public boolean equals(Object client){
         if(client instanceof Client){
-            if(cpf == ((Client)client).getCpf()) return true;
+            if(cpf.equals(((Client)client).getCpf())) return true;
         }
         return false;
     }

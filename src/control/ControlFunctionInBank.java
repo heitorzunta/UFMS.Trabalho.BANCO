@@ -34,7 +34,7 @@ public class ControlFunctionInBank {
 
             if(account1.withdraw(value)) {
                 System.out.println("SAQUE EFETUADO COM SUCESSO!");
-                System.out.println();
+                System.out.println("TOTAL EM CONTA: R$" + account1.getAmount());
             }
             else System.err.println("TRANSACAO INDISPONIVEL!");
         }

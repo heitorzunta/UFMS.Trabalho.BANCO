@@ -11,8 +11,8 @@ public class OpenAccount extends Accountant {
     private Integer qtdCheque;
     private Double loanValue=0.0;
 
-    public OpenAccount(int accountNumber, Agency agency, Client client) {
-        super(accountNumber, agency, client);
+    public OpenAccount(Agency agency, Client client) {
+        super(agency, client);
     }
 
     public int getQtdCheque() {

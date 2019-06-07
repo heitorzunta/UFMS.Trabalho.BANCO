@@ -4,8 +4,8 @@ public abstract class Accountant extends Account {
 
     private int qtdWithdraw = 0;
 
-    public Accountant(int accountNumber, Agency agency, Client client) {
-        super(accountNumber, agency, client);
+    public Accountant(Agency agency, Client client) {
+        super(agency, client);
     }
 
     public int getQtdWithdraw() {

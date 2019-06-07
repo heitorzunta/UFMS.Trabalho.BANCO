@@ -2,8 +2,8 @@ package model.entities;
 
 public class EasyAccount extends Accountant {
 
-    public EasyAccount(int accountNumber, Client client) {
-        super(accountNumber, new Agency(22222,"Online", null), client);
+    public EasyAccount(Client client) {
+        super(new Agency(22222,"Online", null), client);
     }
 
     // Método deposito na EasyAccount
