@@ -63,7 +63,7 @@ public class Agency implements Comparable<Agency>{
     @Override
     public boolean equals(Object agency){
         if(agency instanceof Agency){
-            if(codAgency == ((Agency)agency).codAgency) return true;
+            if(codAgency.equals(((Agency)agency).codAgency)) return true;
         }
         return false;
     }

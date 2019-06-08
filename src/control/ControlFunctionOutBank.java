@@ -5,6 +5,7 @@ import model.entities.*;
 
 import java.util.List;
 
+import static control.ControlFunctionInBank.FUNCTION_DEPOSIT;
 import static control.ControlFunctionInBank.FUNCTION_WITHDRAW;
 
 public class ControlFunctionOutBank {
@@ -59,6 +60,16 @@ public class ControlFunctionOutBank {
 
         if(conta != null){
             if(conta.getAgency().getCodAgency() == numAgencia) FUNCTION_WITHDRAW(conta, valor);
+            else System.err.println("NUMERO DA AGENCIA INVÁLIDA");
+        }
+        else System.err.println("NUMERO DA CONTA INVÁLIDO");
+    }
+
+    public static void deposito(List<Account> accountList, int numAgencia, int numConta, double valor){
+        Account conta = verConta(accountList, numConta);
+
+        if(conta != null){
+            if(conta.getAgency().getCodAgency() == numAgencia) FUNCTION_DEPOSIT(conta, valor);
             else System.err.println("NUMERO DA AGENCIA INVÁLIDA");
         }
         else System.err.println("NUMERO DA CONTA INVÁLIDO");

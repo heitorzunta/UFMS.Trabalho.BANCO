@@ -153,15 +153,16 @@ public class Main extends SearchList {
                         System.out.print("DIGITE O VALOR DE SAQUE: R$");
                         valor = teclado.nextDouble();
                         saque(arrayListAccount, numAgencia, numero, valor);
-
-
                         break;
 
                     case 5:
-                        int numConta = teclado.nextInt();
-                        Account conta = verConta(arrayListAccount, numConta);
-                        System.out.println(conta);
-                        if(conta == null) System.out.println("vazio");
+                        System.out.print("DIGITE O NUMERO DA AGENCIA: ");
+                        numAgencia = teclado.nextInt();
+                        System.out.print("DIGITE O NUMERO DA CONTA: ");
+                        numero = teclado.nextInt();
+                        System.out.print("DIGITE O VALOR DE SAQUE: R$");
+                        valor = teclado.nextDouble();
+                        deposito(arrayListAccount, numAgencia, numero, valor);
                         break;
 
 
